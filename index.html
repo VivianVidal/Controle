@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <a href="">Produtos</a>
+            <a href="">Categorias</a>
+            <form>
+                <div class="search">
+                    <input class="input-icon" placeholder="Digite sua busca" type="search" name="search">
+                    <button type="button"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="categoria section">
+            <form class="form" id="categoria-form">
+                <h2>Categoria:</h2>
+                <input required type="text" placeholder="Categoria" name="cat" id="cat">
+                <textarea maxlength="100" required placeholder="Digite a descrição" name="des" id="des"></textarea>
+                <div class="container-button">
+                    <button class="button-section" type="button" id="add-categ-btn">Adicionar</button>
+                    <button class="button-section" type="button" id="listar-categ-btn">Listar</button>
+                </div>
+            </form>
+        </section>
+        <section class="produtos section">
+            <form class="form" id="produto-form">
+                <h2>Produto: </h2>
+                <input required type="text" placeholder="Nome" name="Nome" id="nome">
+                <input required placeholder="Código" type="number" name="cod" id="cod">
+                <input required placeholder="Preço" type="number" name="preco" id="preco">
+                <input required placeholder="Quantidade" type="number" name="quant" id="quant">
+                <select class="select-cat" id="categoria-select">
+                    <option class="option-cat" value="" disabled selected>Selecione uma categoria</option>
+                </select>
+
+                <div class="container-button">
+                    <button class="button-section" type="button" id="add-produto-btn">Adicionar</button>
+                    <button class="button-section" type="button" id="listar-produtos-btn">Listar</button>
+                    <button class="button-section" type="button" id="filter">Filtrar</button>
+                </div>
+            </form>
+        </section>
+        <article class="section" id="categoria-container">
+
+        </article>
+        <article class="section" id="produtos-container">
+
+        </article>
+    </main>
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
